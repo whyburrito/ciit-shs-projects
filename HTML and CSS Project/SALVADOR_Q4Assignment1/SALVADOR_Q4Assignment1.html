@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="SALVADOR_Q4Assignment1.css">
+</head>
+<body>
+    <div class="maintitle">
+        <div>
+            MUMBA
+            <img src="Mumba.png" class="titleimage"/>
+        </div>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="langName(event, 'MUMBA')">MUMBA</button>
+        <button class="tablinks" onclick="langName(event, 'Who')">Who is Mumba?</button>
+        <button class="tablinks" onclick="langName(event, 'Sources')">Sources</button>
+    </div>
+    <div id="MUMBA" class="tabcontent">
+        <h2>This is Mumba</h2>
+        <div>
+            <img src="mumba portrait.jpg" class="image"/>
+        </div>
+    </div>
+    <div id="Who" class="tabcontent">
+        <h3>Who exactly is Mumba?</h3>
+        <p>Mumba is an unlockable character from the videogame Dead Estate.</p>
+        <p>Mumba's appearance is that of a short blob with no arms and stubby feet that flop around as he moves</p>
+        <img src="mumba-dead-estate.gif" class="image2">
+        <h3>Mumba's Origin Story</h3>
+        <p>Mumba once lived in the Ugby Mumba dimension, shooting bad guys and getting all the girls. However, one day he gets mortally wounded and kicked out of his dimension, ending up outside the mansion. It's there that Albert appears and saves his life by placing him into a tube in his Laboratory. After an unconfirmed amount of time, he finally breaks free of the tube and can finally move and get back to shooting bad guys.</p>
+        <img src="Mumba story.png" class="image2">
+    </div>
+    <div id="Sources" class="tabcontent">
+        <h3>Sources:</h3>
+        <a href="https://deadestate.wiki.gg/wiki/Mumba">Information about Mumba</a>
+        <br>
+        <a href="https://tenor.com/view/mumba-dead-estate-ugby-mumba-gif-26552205">Mumba walking GIF</a>
+    </div>
+    <script>
+        function langName(evt, name) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(name).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
